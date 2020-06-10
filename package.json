@@ -1,0 +1,49 @@
+{
+  "name": "wms-mrp",
+  "version": "0.0.1",
+  "description": "Woodsland MRP App",
+  "productName": "Woodsland MRP",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "Lo Van Long <lovanlong@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "quasar build -m pwa",
+    "start": "node server.js",
+    "heroku-postbuild": "yarn && yarn build",
+    "dev": "quasar dev"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "quasar": "^1.0.0-beta.19",
+    "sequelize": "^5.21.12",
+    "tedious": "^8.3.0",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^1.9.6",
+    "morgan": "^1.10.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "sass-loader": "^7.1.0",
+    "sequelize-cli": "^5.5.1",
+    "strip-ansi": "=3.0.1"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ],
+  "resolutions": {
+    "ajv": "6.8.1"
+  }
+}
