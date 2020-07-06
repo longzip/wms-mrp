@@ -2,11 +2,16 @@
   <q-layout view="hHh lpR fFf">
     <q-header elevated>
       <q-toolbar>
-
-        <q-toolbar-title class="absolute-center">
-          Awesome Todo
-        </q-toolbar-title>
-
+        <q-toolbar-title class="absolute-center">Woodsland</q-toolbar-title>
+        <q-btn
+          to="/auth"
+          class="absolute-right q-pr-sm"
+          icon="account_circle"
+          no-caps
+          flat
+          dense
+          label="Login"
+        />
       </q-toolbar>
     </q-header>
 
@@ -17,7 +22,8 @@
           :key="nav.label"
           :to="nav.to"
           :icon="nav.icon"
-          :label="nav.label" />
+          :label="nav.label"
+        />
       </q-tabs>
     </q-footer>
 
@@ -37,7 +43,8 @@
           :to="nav.to"
           class="text-grey-4"
           exact
-          clickable>
+          clickable
+        >
           <q-item-section avatar>
             <q-icon :name="nav.icon" />
           </q-item-section>
@@ -45,7 +52,6 @@
             <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
         </q-item>
-        
       </q-list>
     </q-drawer>
 
@@ -56,43 +62,43 @@
 </template>
 
 <script>
-  import { openURL } from 'quasar'
+import { openURL } from "quasar";
 
-  export default {
-    name: 'MyLayout',
-    data () {
-      return {
-        leftDrawerOpen: this.$q.platform.is.desktop,
-        navs: [
-          {
-            label: 'Todo',
-            icon: 'list',
-            to: '/'
-          },
-          {
-            label: 'Settings',
-            icon: 'settings',
-            to: '/settings'
-          }
-        ]
-      }
-    },
-    methods: {
-      openURL
-    }
+export default {
+  name: "MyLayout",
+  data() {
+    return {
+      leftDrawerOpen: this.$q.platform.is.desktop,
+      navs: [
+        {
+          label: "Todo",
+          icon: "list",
+          to: "/"
+        },
+        {
+          label: "Settings",
+          icon: "settings",
+          to: "/settings"
+        }
+      ]
+    };
+  },
+  methods: {
+    openURL
   }
+};
 </script>
 
 <style lang="scss">
-  @media screen and (min-width: 768px) {
-    .q-footer {
-      display: none;
-    }
+@media screen and (min-width: 768px) {
+  .q-footer {
+    display: none;
   }
-  
-  .q-drawer {
-    .q-router-link--exact-active {
-      color: white !important;
-    }
+}
+
+.q-drawer {
+  .q-router-link--exact-active {
+    color: white !important;
   }
+}
 </style>
