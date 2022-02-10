@@ -29,7 +29,7 @@
   "devDependencies": {
     "@quasar/app": "^1.9.6",
     "morgan": "^1.10.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^2.0.4",
     "sass-loader": "^7.1.0",
     "sequelize-cli": "^5.5.1",
